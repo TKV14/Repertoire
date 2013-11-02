@@ -1,0 +1,150 @@
+body {
+    font-family : "Ultralight";
+    font-size : 1em;
+    text-align : center;
+    background-repeat : no-repeat;
+    margin : auto;
+}
+
+#page {
+    background-image : url('images/background.jpg');
+    width : 1000px;
+    height : 900px;
+    margin : auto;
+}
+
+.titre {
+    font-family : "Ultralight";
+	font-size : 5em;
+	color : white;
+}
+	
+.form_signxx {
+	background : #77B5FE;
+	padding : 15px;
+	border : 20px solid white;
+	margin : auto;
+	position : fixed;
+	top : 50%;
+	left : 27%;
+	box-shadow : 0px 0px 30px #000;	
+	border-radius : 50px;
+	z-index : 1;
+	font-family : helvetica, sans-serif;
+	color : #22427C;
+}
+	
+.add_contact {
+	background : #77B5FE;
+	width : 500px;
+	padding : 15px;
+	border : 20px solid white;
+	margin : auto;
+	position : relative;
+	top : 10%;
+	box-shadow : 0px 0px 30px #000;	
+	border-radius : 50px;
+	z-index : 1;
+	font-family : helvetica, sans-serif;
+	color : #22427C;
+}	
+	
+.tableau {
+	position : relative;
+	margin-left : 80px;
+	top : 10%;
+	color : white;
+	font-size : 1.2em;
+	font-family : arial, sans serif;
+}
+	
+@font-face {
+    font-family: "Ultralight";
+    src: url('font/helvetica_neue_ultralight.ttf'),
+    url('font/helvetica_neue_ultralight.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+th {
+	width : 200px;
+	background : transparent;
+	color : black;
+}
+	
+tr {
+	background : transparent;
+	color : white;
+	text-align : center;
+}
+	
+	
+.element {
+	margin-left : 27%;
+	top : 5%;
+	position : relative;
+	text-align : center;
+}
+
+
+.bouton a{ 
+	margin-right : 100px;
+	float : left;
+	font-size : 70px;
+	color : #FFFFFF;
+	padding : 0px 10px 35px;
+	text-decoration : none;
+	line-height : 0.5;
+}	
+
+.bouton a:hover {
+  	border-bottom : solid 1px white;
+}
+
+.element2 {
+	margin-left : 120px;
+	width : 800px;
+	top : 5%;
+	position : relative;
+	text-align : center;
+}
+
+.bouton2 a{ 
+	font-size : 30px;
+	margin-left : 50px;
+	float : left;
+	color : #FFFFFF;
+	padding : 0px 20px 10px;
+	text-decoration : none;
+	line-height : 0.5;
+}	
+
+.bouton2 a:hover {
+  	border-bottom : solid 1px white;
+}
+
+h1 {
+	color : white;
+}
+
+h3 {
+	font-weight : bold;
+	font-size : 1em;
+}
+
+h4 {
+	font-size : 0.8em;
+}
+h5 {
+	font-size : 0.7em;
+}
+
+footer {
+	position : fixed;
+	bottom : 0;
+	left : 0;
+	right : 0;
+	height : 30px;
+	color : white;
+	font-family : arial, sans serif;
+}
