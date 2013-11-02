@@ -6,14 +6,17 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 	<title>Insert title here</title>
-	</head>
+</head>
 <body>
 	<h1>Home</h1>
 	Contact
 	<table>
+		<c:forEach var="contact" items="${contactList}">
 			<tr>
-				<td>${contactList.getName()}</td>
+				<td>${contact.getName()}</td>
+				<td>${contact.getFirstName()}</td>
 			</tr>
+		</c:forEach>
 	</table>
 </body>
 </html>
