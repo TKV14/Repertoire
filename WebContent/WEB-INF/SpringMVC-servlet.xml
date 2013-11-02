@@ -5,7 +5,7 @@
 	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
 			<props>
-				<prop key="/">Home</prop>
+				<prop key="/home.html">Home</prop>
 			</props>
 		</property>
 	</bean>
