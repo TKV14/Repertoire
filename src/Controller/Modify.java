@@ -15,7 +15,7 @@ import Metier.Contact;
 
 public class Modify {
 
-	@RequestMapping(method=RequestMethod.GET)
+	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		Contact c = ListContact.getInstance().getAllContact().get(request.getParameter("keyValue"));//new Contact("nom", "prenom", "mail");

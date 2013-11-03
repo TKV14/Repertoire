@@ -51,7 +51,7 @@
 						<TD>
 						<form name = "getKey" method ="post" action = "./modify.html">
 						<input name="keyValue" type="hidden" value ="${contact.getKey()}">
-						<a href="./modify.html">${contact.getName()}</a>
+						<a href="#" onClick=getKey.submit()>${contact.getName()}</a>
 						</form></TD>
 						<TD>${contact.getFirstName()}</TD>
 						<TD>${contact.getMail()}</TD>
