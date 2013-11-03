@@ -57,4 +57,8 @@ public class Adresse {
 	public void setVille(String ville) {
 		this.ville = ville;
 	}
+	
+	public String getKey() {
+		return this.num + this.rue + this.ville + this.codePostal;
+	}
 }

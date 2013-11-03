@@ -1,7 +1,7 @@
 package Controller;
 
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.annotation.WebServlet;
@@ -21,6 +21,7 @@ public class Home{
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
+		ListContact.getInstance().printAll();
 		return printContact(request, response);
 	}
 	
@@ -28,18 +29,19 @@ public class Home{
 	public ModelAndView handleRequestForm(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		Contact c = new Contact(request.getParameter("contact_LastName"), request.getParameter("contact_FirstName"), request.getParameter("contact_Email"));
-		
-		ListContact.getInstance().addContact(c);
-		
-		return printContact(request, response);
+
+		if(ListContact.getInstance().addContact(c) == 0)
+			return printContact(request, response);
+		else
+			return null;
 	}
 	
 	private ModelAndView printContact(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		ListContact contactList = ListContact.getInstance();
 		
-		Map<String, List<Contact>> model = new HashMap<String, List<Contact>>();
-		model.put("contactList", contactList.getAllContact());
+		Map<String, Collection<Contact>> model = new HashMap<String, Collection<Contact>>();
+		model.put("contactList", contactList.getAllContact().values());
 		
 		return new ModelAndView("home", model);
 	}

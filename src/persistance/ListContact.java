@@ -1,18 +1,17 @@
 package persistance;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 import Metier.Contact;
 
 public class ListContact {
 
 	private static volatile ListContact instance = null;
-	private List<Contact> allContact;
+	private HashMap<String, Contact> allContact;
 	
 	private ListContact() {
 		super();
-		allContact = new ArrayList<Contact>(0);
+		allContact = new HashMap<String, Contact>();
 	}
 	
 	public final static ListContact getInstance() {
@@ -28,15 +27,24 @@ public class ListContact {
 		return ListContact.instance;
 	}
 	
-	public void addContact(Contact c) {
-		this.allContact.add(c);
+	public int addContact(Contact c) {
+		if(this.allContact.put(c.getName() + c.getFirstName() ,c) == null)
+			return 0;
+		else
+			return 1;
 	}
 	
 	public void removeContact(Contact c) {
-		this.allContact.remove(0);
+		this.allContact.remove(c);
 	}
 	
-	public List<Contact> getAllContact() {
+	public HashMap<String, Contact> getAllContact() {
 		return this.allContact;
+	}
+	
+	public void printAll() {
+		for(Contact c : this.allContact.values()) {
+			System.out.println("Nom: " + c.getName() + "; Prenom: " + c.getFirstName());
+		}
 	}
 }

@@ -1,7 +1,8 @@
 package Metier;
 
-import java.util.HashSet;
+import java.util.HashMap;
 
+import persistance.ListAdresse;
 import persistance.ListContact;
 
 public class Contact {
@@ -10,7 +11,7 @@ public class Contact {
 	private String firstName;
 	private String mail;
 	
-	private HashSet<Adresse> adresse;
+	private HashMap<String, Adresse> adresse;
 	
 	public Contact(String name, String firstName) {
 		this.name = name;
@@ -22,7 +23,7 @@ public class Contact {
 		this.firstName = firstName;
 		this.mail = mail;
 		
-		this.adresse = new HashSet<Adresse>();
+		this.adresse = new HashMap<String, Adresse>();
 	}
 
 	public String getName() {
@@ -49,15 +50,32 @@ public class Contact {
 		this.mail = mail;
 	}
 
-	public HashSet<Adresse> getAdresse() {
+	public HashMap<String, Adresse> getAdresse() {
 		return adresse;
 	}
 	
 	public void addAdresse(Adresse a) {
-		this.adresse.add(a);
+		ListAdresse.getInstance().addAdresse(a);
+		this.adresse.put(a.getKey(), ListAdresse.getInstance().getAllAdresse().get(a.getNum() + a.getRue() + a.getVille() + a.getCodePostal()));
 	}
 	
-	public int getIndex() {
-		return ListContact.getInstance().getAllContact().indexOf(this);
+	public void removeAdresse(Adresse a) {
+		boolean useAdresse = false;
+		
+		this.adresse.remove(a.getKey());
+
+		for(Contact c : ListContact.getInstance().getAllContact().values()) {
+			if(c.getAdresse().containsKey(a.getKey())) {
+				useAdresse = true;
+				break;
+			}
+		}
+		
+		if(useAdresse == false)
+			ListAdresse.getInstance().getAllAdresse().remove(a.getKey());
+	}
+	
+	public String getKey() {
+		return this.name + this.firstName;
 	}
 }

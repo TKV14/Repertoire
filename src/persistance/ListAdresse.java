@@ -1,19 +1,17 @@
 package persistance;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 import Metier.Adresse;
-import Metier.Contact;
 
 public class ListAdresse {
 
 	private static volatile ListAdresse instance = null;
-	private List<Adresse> allAdresse;
+	private HashMap<String, Adresse> allAdresse;
 	
 	private ListAdresse() {
 		super();
-		allAdresse = new ArrayList<Adresse>(0);
+		allAdresse = new HashMap<String, Adresse>(0);
 	}
 	
 	public final static ListAdresse getInstance() {
@@ -29,15 +27,14 @@ public class ListAdresse {
 		return ListAdresse.instance;
 	}
 	
-	public void addAdresse(Adresse a) {
-		this.allAdresse.add(a);
+	public int addAdresse(Adresse a) {
+		if(this.allAdresse.put(a.getKey(), a) == null)
+			return 0;
+		else
+			return 1;
 	}
 	
-	public void removeContact(Contact c) {
-		this.allAdresse.remove(0);
-	}
-	
-	public List<Adresse> getAllAdresse() {
+	public HashMap<String, Adresse> getAllAdresse() {
 		return this.allAdresse;
 	}
 }
