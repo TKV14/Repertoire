@@ -50,7 +50,7 @@
 					<TR>
 						<TD>${contact.getName()}</TD>
 						<TD>${contact.getFirstName()}</TD>
-						<TD>Email</TD>
+						<TD>${contact.getMail()}</TD>
 						<TD><img src="ressources/images/modifier.png"></img>
 						/ <img src="ressources/images/delete.png"></img></TD>
 					</TR>
@@ -62,7 +62,7 @@
 		<br>
 
 		<div id="add_contact" class="add_contact" style="display:none;">
-			<form name="add_contact" action="/" method="post">
+			<form name="add_contact" action="./home.html" method="post">
 				<h3>Veuillez remplir les champs suivants : </h3>
 				<h4>Civil</h4>
 					<input id="contact_nom" name="contact_LastName" type="text" placeholder="Nom" required="required" value="${contact.getLastName}" size="30"/>
