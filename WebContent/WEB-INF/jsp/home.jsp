@@ -15,7 +15,7 @@
 		<div id="page">
  	
  			<div class="titre">
-   			ESIEA AGENDAAA
+   			ESIEA AGENDA
    			</div>  
 
 		<div class="element2">
