@@ -1,5 +1,6 @@
 package Metier;
 
+import java.util.Date;
 import java.util.HashMap;
 
 import persistance.ListAdresse;
@@ -10,6 +11,8 @@ public class Contact {
 	private String name;
 	private String firstName;
 	private String mail;
+	private Date dateDeNaissance;
+	private boolean actif;
 	
 	private HashMap<String, Adresse> adresse;
 	
@@ -24,6 +27,8 @@ public class Contact {
 		this.mail = mail;
 		
 		this.adresse = new HashMap<String, Adresse>();
+		
+		this.actif = true;
 	}
 
 	public String getName() {
@@ -77,5 +82,24 @@ public class Contact {
 	
 	public String getKey() {
 		return this.name + this.firstName;
+	}
+
+	public Date getDateDeNaissance() {
+		return dateDeNaissance;
+	}
+
+	public void setDateDeNaissance(Date dateNaissance) {
+		this.dateDeNaissance = dateNaissance;
+	}
+
+	public String isActif() {
+		if(actif)
+			return "oui";
+		else
+			return "non";
+	}
+
+	public void setActif(boolean actif) {
+		this.actif = actif;
 	}
 }

@@ -42,16 +42,14 @@
 						<TD>${contact.getMail()}</TD>
 					</TR>
 					<TR> 
-						<TH>DATE DE NAISSANCE</TH> 
-						<TH>AGE</TH> 
+						<TH>DATE DE NAISSANCE</TH>
 						<TH>ACTIF</TH>
 					</TR>
 					<TR>
 						<TD>${contact.getDateDeNaissance()}</TD>
-						<TD>${contact.getAge()}</TD>
-						<TD>${contact.getActif()}</TD>
-					</TR>  
-			</p>				
+						<TD>${contact.isActif()}</TD>
+					</TR>
+			</p>
 			</TABLE>
 		</div>
 		

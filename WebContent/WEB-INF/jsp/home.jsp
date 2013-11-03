@@ -48,7 +48,11 @@
 					</TR> 
 				<c:forEach var="contact" items="${contactList}">
 					<TR>
-						<TD>${contact.getName()}</TD>
+						<TD>
+						<form name = "getKey" method ="post" action = "./modify.html">
+						<input name="keyValue" type="hidden" value ="${contact.getKey()}">
+						<a href="./modify.html">${contact.getName()}</a>
+						</form></TD>
 						<TD>${contact.getFirstName()}</TD>
 						<TD>${contact.getMail()}</TD>
 						<TD><img src="ressources/images/modifier.png"></img>
@@ -58,7 +62,6 @@
 			</p>				
 			</TABLE>
 		</div>
-		
 		<br>
 
 		<div id="add_contact" class="add_contact" style="display:none;">
