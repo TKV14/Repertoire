@@ -58,6 +58,24 @@ body {
 	font-family : arial, sans serif;
 }
 	
+.tableau2 {
+	position : relative;
+	margin-left : 190px;
+	top : 10%;
+	color : white;
+	font-size : 1.2em;
+	font-family : arial, sans serif;
+}	
+
+.tableau_address {
+	position : relative;
+	margin-left : 425px;
+	top : 10%;
+	color : white;
+	font-size : 1.2em;
+	font-family : arial, sans serif;
+}	
+	
 @font-face {
     font-family: "Ultralight";
     src: url('font/helvetica_neue_ultralight.ttf'),
@@ -109,6 +127,20 @@ tr {
 	text-align : center;
 }
 
+.element3 {
+	margin-left : 320px;
+	width : 1000px;
+	top : 5%;
+	text-align : center;
+	position : relative;
+}
+
+.bloc_address {
+	position : relative;
+	top : 10%;	
+	font-size : 10px;
+}	
+
 .bouton2 a{ 
 	font-size : 30px;
 	margin-left : 50px;
@@ -137,6 +169,12 @@ h4 {
 }
 h5 {
 	font-size : 0.7em;
+}
+
+h6 {
+	font-size : 2em;
+	font-weight : bold;
+	color : white;
 }
 
 footer {
