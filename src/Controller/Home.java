@@ -21,12 +21,7 @@ public class Home{
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		ListContact contactList = ListContact.getInstance();
-		
-		Map<String, List<Contact>> model = new HashMap<String, List<Contact>>();
-		model.put("contactList", contactList.getAllContact());
-		
-		return new ModelAndView("home", model);
+		return printContact(request, response);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
@@ -36,8 +31,15 @@ public class Home{
 		
 		ListContact.getInstance().addContact(c);
 		
+		return printContact(request, response);
+	}
+	
+	private ModelAndView printContact(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		ListContact contactList = ListContact.getInstance();
+		
 		Map<String, List<Contact>> model = new HashMap<String, List<Contact>>();
-		model.put("contactList", ListContact.getInstance().getAllContact());
+		model.put("contactList", contactList.getAllContact());
 		
 		return new ModelAndView("home", model);
 	}

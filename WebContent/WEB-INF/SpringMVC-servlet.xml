@@ -6,12 +6,14 @@
 		<property name="mappings">
 			<props>
 				<prop key="/home.html">Home</prop>
+				<prop key="/modify.html">Modify</prop>
 			</props>
 		</property>
 	</bean>
 	
 	<!-- les contrôleurs de l'application-->
 	<bean id="Home" class="Controller.Home"/>
+	<bean id="Modify" class="Controller.Modify"/>
 
 	<!-- le résolveur de vues -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
