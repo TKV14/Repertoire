@@ -61,8 +61,6 @@ public class Search {
 		}
 		
 		model.put("contactList", contactList.values());
-		
-		System.out.println("Actif: " + actif + "Prenom: " + firstName);
 	
 		return new ModelAndView("result", model);
 	}
