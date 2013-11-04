@@ -6,6 +6,7 @@
 		<property name="mappings">
 			<props>
 				<prop key="/home.html">Home</prop>
+				<prop key="/detail.html">Modify</prop>
 				<prop key="/modify.html">Modify</prop>
 			</props>
 		</property>
@@ -13,6 +14,7 @@
 	
 	<!-- les contrôleurs de l'application-->
 	<bean id="Home" class="Controller.Home"/>
+	<bean id="Detail" class="Controller.Detail"/>
 	<bean id="Modify" class="Controller.Modify"/>
 
 	<!-- le résolveur de vues -->

@@ -1,10 +1,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false" %>
 
 <html>
 	<head>
-		<title>ESIEA Agenda - Page de Gestion</title>    	
+		<title>ESIEA Agenda - Contact</title>    	
 		<link rel="stylesheet" type="text/css" href="ressources/design.css"/>
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="ressources/js/scripts2.js"></script>
@@ -18,64 +18,61 @@
    			ESIEA AGENDA
    			</div>  
 
-		<div class="element2">
-
+		<div class="element3">
 			<p id="bouton_liste" class="bouton2">
 				<a href="./home.html" onclick="liste_contact();">Liste des Contacts</a>
 			</p>
-
-			<p id="bouton_add" class="bouton2">
-				<a href="#" onclick="form_contact();">Ajouter</a>
-			</p>
-
-			<p id="bouton_search" class="bouton2">
-				<a href="#">Rechercher</a>
-			</p>
-
 		</div>
 
 		<br>
 	
-		<div id="tableau" class="tableau">
+		<div id="tableau2" class="tableau2">
 			<TABLE BORDER="1"> 
 			<p>
-				<CAPTION><h1>Liste des Contacts</h1></CAPTION> 
+				<CAPTION><h1>Informations du Contact</h1></CAPTION>
+				<var="contact" items="${contact}"> 
 					<TR> 
 						<TH>NOM</TH> 
 						<TH>PRENOM</TH> 
 						<TH>EMAIL</TH> 
-						<TH>MODIFIER / SUPPRIMER</TH> 
 					</TR> 
-				<c:forEach var="contact" items="${contactList}">
 					<TR>
-						<TD>
-						<form name = "getKey" method ="post" action = "./detail.html">
-						<input name="keyValue" type="hidden" value ="${contact.getKey()}">
-						<a href="#" onClick=getKey.submit()>${contact.getName()}</a>
-						</form></TD>
+						<TD>${contact.getName()}</TD>
 						<TD>${contact.getFirstName()}</TD>
 						<TD>${contact.getMail()}</TD>
-						<TD><img src="ressources/images/modifier.png"></img>
-						/ <img src="ressources/images/delete.png"></img></TD>
 					</TR>
-				</c:forEach>
-			</p>				
+					<TR> 
+						<TH>DATE DE NAISSANCE</TH>
+						<TH>ACTIF</TH>
+					</TR>
+					<TR>
+						<TD>${contact.getDateDeNaissance()}</TD>
+						<TD>${contact.isActif()}</TD>
+					</TR>
+			</p>
 			</TABLE>
 		</div>
+		
 		<br>
-
+		<div id="tableau_address" class="tableau_address">		
+			<TABLE BORDER="1"> 
+			<p>
+				<CAPTION><h1>Adresses</h1></CAPTION> 		
+			</p>
+		</div>
+		
 		<div id="add_contact" class="add_contact" style="display:none;">
 			<form name="add_contact" action="./home.html" method="post">
 				<h3>Veuillez remplir les champs suivants : </h3>
 				<h4>Civil</h4>
-					<input id="contact_nom" name="contact_LastName" type="text" placeholder="Nom" required="required" value="${contact.getLastName}" size="30"/>
-					<input id="contact_prenom" name="contact_FirstName" type="text" placeholder="Prénom" required="required" value="${contact.getFirstName}" size="30" />
+					<input id="contact_nom" name="contact_LastName" type="text" placeholder="Nom" required="required" value="" size="30"/>
+					<input id="contact_prenom" name="contact_FirstName" type="text" placeholder="PrÃ©nom" required="required" value="" size="30" />
 					<p>
-					<input id="contact_email" name="contact_Email" type="" placeholder="Email" required="required" value="${contact.getEmail}" size="40" />
+					<input id="contact_email" name="contact_Email" type="" placeholder="Email" required="required" value="" size="40" />
 					</p>
 				<h4>Date de Naissance</h4>
 					<p>
-					<input id="contact_datedenaissance" name="contact_DateDeNaissance" type="date" value="${dateformat.format(contact.getcontact_DateDeNaissance())}" size="11"/>
+					<input id="contact_datedenaissance" name="contact_DateDeNaissance" type="date" value="" size="11"/>
 					</p>
 					<input type="submit" name="submit" value="Valider" />
 			</form>
@@ -86,7 +83,7 @@
 					<input id="adresse_intitule" name="adresse_intitule" type="text" placeholder="Maison, Bureau..." required="required" size="20"/>
 					</p>
 					<p>
-					<input id="adresse_numero" name="adresse_numero" type="text" placeholder="Numéro" required="required" size="10"/>
+					<input id="adresse_numero" name="adresse_numero" type="text" placeholder="NumÃ©ro" required="required" size="10"/>
 					<input id="adresse_rue" name="adresse_rue" type="text" placeholder="Rue" required="required" size="50"/>
 					</p>
 					<p>
@@ -107,7 +104,7 @@
 </div>
 	
 	<footer>
-		Arthur CLOUET - ESIEA AGENDA © 2013 - Nicolas LOUIS
+		Arthur CLOUET - ESIEA AGENDA Â© 2013 - Nicolas LOUIS
 	</footer>
 
 	</body>
