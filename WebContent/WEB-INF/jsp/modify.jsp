@@ -69,6 +69,7 @@
 					<input id="adresse_cp" name="adresse_cp" type="text" placeholder="Code Postal" required="required" value="${adresse.getCodePostal()}" size="20"/>
 					<input id="adresse_ville" name="adresse_ville" type="text" placeholder="Ville" required="required" value="${adresse.getVille()}" size="30"/>
 					</p>
+					<input type="hidden" name="maj" value="majadresse" />
 										<input type="submit" name="submit" value="Valider" />
 			</form>							
 			

@@ -34,7 +34,7 @@ public class Modify {
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView handleRequestForm(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		System.out.println(request.getParameter("maj"));
+		System.out.println(request.getParameter("submit"));
 		
 //		Contact c = ListContact.getInstance().getAllContact().get(request.getParameter("keyValue"));
 //		Collection<Adresse> adresseList = c.getAdresse().values();
