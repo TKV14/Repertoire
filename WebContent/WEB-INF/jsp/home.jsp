@@ -57,10 +57,7 @@
 						<TD>${contact.getFirstName()}</TD>
 						<TD>${contact.getMail()}</TD>
 						<TD>
-						<form name="getKey" method="post" action="./modify.html">
-						<input name="keyValue" type="hidden" value="${contact.getKey()}">
-						<input name="submit" type="submit" class="link2">
-						</form>
+						<a href="./modify.html?keyValue=${contact.getKey()}"><img alt="modify" src="ressources/images/modifier.png"></a>
 						</TD>
 						<TD><img src="ressources/images/delete.png"></img></TD>
 					</TR>
