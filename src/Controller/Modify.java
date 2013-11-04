@@ -18,16 +18,32 @@ import Metier.Contact;
 
 public class Modify {
 
-	@RequestMapping(method=RequestMethod.POST)
+	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		Contact c = ListContact.getInstance().getAllContact().get(request.getParameter("keyValue"));
-		Collection<Adresse> adresseList = ListAdresse.getInstance().getAllAdresse().values();
+		Collection<Adresse> adresseList = c.getAdresse().values();
 		
 		Map<String, Object> model = new HashMap<String, Object>();
 		model.put("contact", c);
 		model.put("adresseList", adresseList);
 		
 		return new ModelAndView("modify", model);
+	}
+	
+	@RequestMapping(method=RequestMethod.POST)
+	public ModelAndView handleRequestForm(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		System.out.println(request.getParameter("maj"));
+		
+//		Contact c = ListContact.getInstance().getAllContact().get(request.getParameter("keyValue"));
+//		Collection<Adresse> adresseList = c.getAdresse().values();
+		
+//		Map<String, Object> model = new HashMap<String, Object>();
+//		model.put("contact", c);
+//		model.put("adresseList", adresseList);
+		
+		return null;
+//		return new ModelAndView("modify", model);
 	}
 }

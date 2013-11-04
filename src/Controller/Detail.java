@@ -22,7 +22,7 @@ public class Detail {
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		Contact c = ListContact.getInstance().getAllContact().get(request.getParameter("keyValue"));
-		Collection<Adresse> adresseList = ListAdresse.getInstance().getAllAdresse().values();
+		Collection<Adresse> adresseList = c.getAdresse().values();
 		
 		Map<String, Object> model = new HashMap<String, Object>();
 		model.put("contact", c);

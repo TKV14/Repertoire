@@ -39,6 +39,7 @@
 					<h5>
 					<input type="radio" name="actif" value="Oui" /> Oui
 					<input type="radio" name="actif" value="Non" /> Non
+					<input type="hidden" name="maj" value="infos" />
 					</h5>
 					</p>
 					<input id="valider1" type="submit" name="submit" value="Valider" />
