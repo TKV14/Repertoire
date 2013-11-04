@@ -41,18 +41,43 @@
 					<input type="radio" name="actif" value="Non" /> Non
 					</h5>
 					</p>
-					<input type="submit" name="submit" value="Valider" />
+					<input id="valider1" type="submit" name="submit" value="Valider" />
 			</form>
 			
 			<c:forEach var="adresse" items="${adresseList}">
 			<div id="adresse" class="adresse">
-			${adresse.getType()} <br>
+			<h7>${adresse.getType()}</h7> <br>
 			${adresse.getNum()} ${adresse.getRue()} <br>
 			${adresse.getCodePostal()} ${adresse.getVille()} <br>
 			</div>
-			<a href="#" onclick="address();">Modifier l'adresse du contact</a>
+			<br>
+			<a href="#" onclick="modif_address();">Modifier l'adresse du contact</a>
+			
+			
+			
+			<form id="modif_address" name="adresse_getKey" action="./modify.html" method="post" style="display:none;">
+				<h4>Adresse</h4>
+					<p>
+					<input id="adresse_intitule" name="adresse_intitule" type="text" placeholder="Maison, Bureau..." required="required" value="${adresse.getType()}" size="20"/>
+					</p>
+					<p>
+					<input id="adresse_numero" name="adresse_numero" type="text" placeholder="Numéro" required="required" value="${adresse.getNum()}" size="10"/>
+					<input id="adresse_rue" name="adresse_rue" type="text" placeholder="Rue" required="required" value="${adresse.getRue()}" size="50"/>
+					</p>
+					<p>
+					<input id="adresse_cp" name="adresse_cp" type="text" placeholder="Code Postal" required="required" value="${adresse.getCodePostal()}" size="20"/>
+					<input id="adresse_ville" name="adresse_ville" type="text" placeholder="Ville" required="required" value="${adresse.getVille()}" size="30"/>
+					</p>
+										<input type="submit" name="submit" value="Valider" />
+			</form>							
+			
 			</c:forEach>
-						<a href="#" onclick="address();">Modifier l'adresse du contact</a>
+			
+			
+			
+			<br>
+			<br>
+			<a href="#" onclick="address();">Ajouter une adresse au contact</a>
 			
 			<form id="add_address" name="adresse_getKey" action="./modify.html" method="post" style="display:none;">
 				<h4>Adresse</h4>
