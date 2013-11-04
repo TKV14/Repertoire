@@ -54,28 +54,13 @@
 		</div>
 		
 		<br>
-		<div id="tableau_address" class="tableau_address">		
-			<TABLE BORDER="1"> 
 			<p>
 				<CAPTION><h1>Adresses</h1></CAPTION> 		
 			</p>
+		<div id="adresse" class="adresse">
+		test
 		</div>
 		
-		<div id="add_contact" class="add_contact" style="display:none;">
-			<form name="add_contact" action="./home.html" method="post">
-				<h3>Veuillez remplir les champs suivants : </h3>
-				<h4>Civil</h4>
-					<input id="contact_nom" name="contact_LastName" type="text" placeholder="Nom" required="required" value="" size="30"/>
-					<input id="contact_prenom" name="contact_FirstName" type="text" placeholder="Prénom" required="required" value="" size="30" />
-					<p>
-					<input id="contact_email" name="contact_Email" type="" placeholder="Email" required="required" value="" size="40" />
-					</p>
-				<h4>Date de Naissance</h4>
-					<p>
-					<input id="contact_datedenaissance" name="contact_DateDeNaissance" type="date" value="" size="11"/>
-					</p>
-					<input type="submit" name="submit" value="Valider" />
-			</form>
 				<a href="#" onclick="address();">Ajouter une adresse au contact</a>
 			<form id="add_address" name="add_address" action="/" method="post" style="display:none;">
 				<h4>Adresse</h4>
@@ -90,14 +75,6 @@
 					<input id="adresse_cp" name="adresse_cp" type="text" placeholder="Code Postal" required="required" size="20"/>
 					<input id="adresse_ville" name="adresse_ville" type="text" placeholder="Ville" required="required" size="30"/>
 					</p>
-				<h4>Actif</h4>
-					<p>
-					<h5>
-					<input type="radio" name="actif" value="Oui" /> Oui
-					<input type="radio" name="actif" value="Non" /> Non
-					</h5>
-					</p>
-					<input type="submit" name="submit" value="Valider" />
 			</form>
 		</div>			
 	</div>

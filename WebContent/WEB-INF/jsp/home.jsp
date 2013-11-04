@@ -44,7 +44,8 @@
 						<TH>NOM</TH> 
 						<TH>PRENOM</TH> 
 						<TH>EMAIL</TH> 
-						<TH>MODIFIER / SUPPRIMER</TH> 
+						<TH>MODIFIER</TH>
+						<TH>SUPPRIMER</TH> 
 					</TR> 
 				<c:forEach var="contact" items="${contactList}">
 					<TR>
@@ -55,8 +56,12 @@
 						</form></TD>
 						<TD>${contact.getFirstName()}</TD>
 						<TD>${contact.getMail()}</TD>
-						<TD><img src="ressources/images/modifier.png"></img>
-						/ <img src="ressources/images/delete.png"></img></TD>
+						<TD>
+						<form name="getKey" method="post" action="./modify.html">
+						<input name="keyValue" type="hidden" value="${contact.getKey()}">
+						<a href="#" onClick=getKey.submit()><img src="ressources/images/modifier.png"></img></a></form>
+						</TD>
+						<TD><img src="ressources/images/delete.png"></img></TD>
 					</TR>
 				</c:forEach>
 			</p>				

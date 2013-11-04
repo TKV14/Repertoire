@@ -61,18 +61,17 @@
 			</p>
 		</div>
 		
-		<div id="add_contact" class="add_contact" style="display:none;">
+		<div id="add_contact" class="add_contact"">
 			<form name="add_contact" action="./home.html" method="post">
-				<h3>Veuillez remplir les champs suivants : </h3>
 				<h4>Civil</h4>
-					<input id="contact_nom" name="contact_LastName" type="text" placeholder="Nom" required="required" value="" size="30"/>
-					<input id="contact_prenom" name="contact_FirstName" type="text" placeholder="Prénom" required="required" value="" size="30" />
+					<input id="contact_nom" name="contact_LastName" type="text" placeholder="Nom" required="required" value="${contact.getName()}" size="30"/>
+					<input id="contact_prenom" name="contact_FirstName" type="text" placeholder="Prénom" required="required" value="${contact.getFirstName()}" size="30" />
 					<p>
-					<input id="contact_email" name="contact_Email" type="" placeholder="Email" required="required" value="" size="40" />
+					<input id="contact_email" name="contact_Email" type="" placeholder="Email" required="required" value="${contact.getMail()}" size="40" />
 					</p>
 				<h4>Date de Naissance</h4>
 					<p>
-					<input id="contact_datedenaissance" name="contact_DateDeNaissance" type="date" value="" size="11"/>
+					<input id="contact_datedenaissance" name="contact_DateDeNaissance" type="date" value="${contact.getDateDeNaissance()}" size="11"/>
 					</p>
 					<input type="submit" name="submit" value="Valider" />
 			</form>
