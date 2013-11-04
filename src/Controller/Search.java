@@ -60,13 +60,6 @@ public class Search {
 			}
 		}
 		
-		if(actif != null) {
-			for(Contact c : ListContact.getInstance().getAllContact().values()) {
-				if(c.isActif().equalsIgnoreCase("non"))
-					ListContact.getInstance().getAllContact().remove(c.getKey());
-			}
-		}
-		
 		model.put("contactList", contactList.values());
 		
 		System.out.println("Actif: " + actif + "Prenom: " + firstName);
