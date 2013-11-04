@@ -17,6 +17,7 @@ public class ListContact {
 		this.addContact(new Contact("CLOUET", "Arthur", "polth@gmail.com"));
 		Contact c = new Contact("LOUIS", "Nicolas", "tkv@hotmail.fr");
 		c.addAdresse(new Adresse("Maison", "2", "rue du loiret", "75013", "Paris"));
+		c.setActif(false);
 		this.addContact(c);
 	}
 	
