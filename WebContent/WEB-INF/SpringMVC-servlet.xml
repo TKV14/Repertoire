@@ -6,7 +6,7 @@
 		<property name="mappings">
 			<props>
 				<prop key="/home.html">Home</prop>
-				<prop key="/detail.html">Modify</prop>
+				<prop key="/detail.html">Detail</prop>
 				<prop key="/modify.html">Modify</prop>
 			</props>
 		</property>

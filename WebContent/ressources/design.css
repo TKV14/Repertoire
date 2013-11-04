@@ -90,11 +90,16 @@ th {
 	color : black;
 }
 
-.a {
+.link {
+	border: none;
+	background-color: transparent;
 	color : white;
 	text-decoration : underline;
 	text-align : center;
 	position : relative;
+	font-size : 1.2em;
+	font-family : arial, sans serif;
+	cursor : pointer;
 }
 	
 tr {

@@ -21,7 +21,6 @@ public class Home{
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		ListContact.getInstance().printAll();
 		return printContact(request, response);
 	}
 	
