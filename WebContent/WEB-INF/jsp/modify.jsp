@@ -98,7 +98,7 @@
 				<a href="#" onclick="address2();">Ajouter une autre adresse au contact</a>
 
 			</form>	
-			<form id="add_address2" name="add_address2" action="/" method="post" style="display:none;">
+			<form id="add_address2" name="add_address2" action="./modify.html" method="post" style="display:none;">
 				<h4>Adresse</h4>
 					<p>
 					<input id="adresse_intitule" name="adresse_intitule" type="text" placeholder="Maison, Bureau..." required="required" size="20"/>

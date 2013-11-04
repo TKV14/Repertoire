@@ -54,7 +54,7 @@ function modif_address(){
 		document.getElementById('valider1').style.display='none';
 
 	} else {
-		document.getElementById('modif_address').style.display='';
+		document.getElementById('modif_address').style.display='none';
 		document.getElementById('adresse').style.display='';
 
 	}
