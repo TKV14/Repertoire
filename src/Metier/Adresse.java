@@ -7,6 +7,7 @@ public class Adresse {
 	private String rue;
 	private String codePostal;
 	private String ville;
+	private String keyValue;
 
 	public Adresse(String type, String num, String rue, String codePostal, String ville) {
 		super();
@@ -16,6 +17,7 @@ public class Adresse {
 		this.setRue(rue);
 		this.setCodePostal(codePostal);
 		this.setVille(ville);
+		this.setKeyValue();
 	}
 
 	public String getType() {
@@ -58,7 +60,15 @@ public class Adresse {
 		this.ville = ville;
 	}
 	
-	public String getKey() {
+/*	public String getKey() {
 		return this.num + this.rue + this.ville + this.codePostal;
+	}
+*/
+	public String getKey() {
+		return keyValue;
+	}
+
+	private void setKeyValue() {
+		this.keyValue = this.num + this.rue + this.ville + this.codePostal;
 	}
 }

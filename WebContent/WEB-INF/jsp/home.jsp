@@ -82,13 +82,6 @@
 					<p>
 					<input id="contact_datedenaissance" name="contact_DateDeNaissance" type="date" value="${dateformat.format(contact.getcontact_DateDeNaissance())}" size="11"/>
 					</p>
-					<h4>Actif</h4>
-					<p>
-					<h5>
-					<input type="radio" name="actif" value="Oui" /> Oui
-					<input type="radio" name="actif" value="Non" /> Non
-					</h5>
-					</p>
 					<input type="submit" name="submit" value="Valider" />
 			</form>
 		</div>			

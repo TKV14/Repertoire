@@ -9,6 +9,7 @@
 				<prop key="/detail.html">Detail</prop>
 				<prop key="/modify.html">Modify</prop>
 				<prop key="/search.html">Search</prop>
+				<prop key="/delete.html">Delete</prop>
 			</props>
 		</property>
 	</bean>
@@ -18,6 +19,7 @@
 	<bean id="Detail" class="Controller.Detail"/>
 	<bean id="Modify" class="Controller.Modify"/>
 	<bean id="Search" class="Controller.Search"/>
+	<bean id="Delete" class="Controller.Delete" />
 
 	<!-- le résolveur de vues -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

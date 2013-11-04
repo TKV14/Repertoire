@@ -37,9 +37,16 @@
 					<h4>Actif</h4>
 					<p>
 					<h5>
-					<input type="radio" name="actif" value="Oui" /> Oui
+					<c:if test="${contact.isActif() == \"oui\"}">
+					<input type="radio" name="actif" value="Oui" checked/> Oui
 					<input type="radio" name="actif" value="Non" /> Non
+					</c:if>
+					<c:if test="${contact.isActif() == \"non\"}">
+					<input type="radio" name="actif" value="Oui" /> Oui
+					<input type="radio" name="actif" value="Non" checked/> Non
+					</c:if>
 					<input type="hidden" name="maj" value="infos" />
+					<input type="hidden" name="keyValue" value="${contact.getKey()}" />
 					</h5>
 					</p>
 					<input id="valider1" type="submit" name="submit" value="Valider" />
@@ -69,8 +76,9 @@
 					<input id="adresse_cp" name="adresse_cp" type="text" placeholder="Code Postal" required="required" value="${adresse.getCodePostal()}" size="20"/>
 					<input id="adresse_ville" name="adresse_ville" type="text" placeholder="Ville" required="required" value="${adresse.getVille()}" size="30"/>
 					</p>
-					<input type="hidden" name="maj" value="majadresse" />
-										<input type="submit" name="submit" value="Valider" />
+						<input type="hidden" name="maj" value="majadresse" />
+						<input type="hidden" name="keyValueAd" value="${adresse.getKey()}" />
+						<input type="submit" name="submit" value="Valider"/>
 			</form>							
 			
 			</c:forEach>
@@ -94,27 +102,12 @@
 					<input id="adresse_cp" name="adresse_cp" type="text" placeholder="Code Postal" required="required" value="${adresse.getCodePostal}" size="20"/>
 					<input id="adresse_ville" name="adresse_ville" type="text" placeholder="Ville" required="required" value="${adresse.getVille}" size="30"/>
 					</p>
-										<input type="submit" name="submit" value="Valider" />
+						<input type="hidden" name="maj" value="newadresse" />
+						<input type="hidden" name="keyValue" value="${keyAdd}" />
+						<input type="submit" name="submit" value="Valider" />
 					<br>
 					<br>
 				<a href="#" onclick="address2();">Ajouter une autre adresse au contact</a>
-
-			</form>	
-			<form id="add_address2" name="add_address2" action="./modify.html" method="post" style="display:none;">
-				<h4>Adresse</h4>
-					<p>
-					<input id="adresse_intitule" name="adresse_intitule" type="text" placeholder="Maison, Bureau..." required="required" size="20"/>
-					</p>
-					<p>
-					<input id="adresse_numero" name="adresse_numero" type="text" placeholder="Numéro" required="required" size="10"/>
-					<input id="adresse_rue" name="adresse_rue" type="text" placeholder="Rue" required="required" size="50"/>
-					</p>
-					<p>
-					<input id="adresse_cp" name="adresse_cp" type="text" placeholder="Code Postal" required="required" size="20"/>
-					<input id="adresse_ville" name="adresse_ville" type="text" placeholder="Ville" required="required" size="30"/>
-					</p>
-			<input type="submit" name="submit" value="Valider" />
-					
 			</form>
 		</div>			
 	</div>

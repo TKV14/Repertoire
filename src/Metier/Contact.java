@@ -11,6 +11,7 @@ public class Contact {
 	private String name;
 	private String firstName;
 	private String mail;
+	private String keyValue;
 	private Date dateDeNaissance;
 	private boolean actif;
 	
@@ -29,6 +30,8 @@ public class Contact {
 		this.adresse = new HashMap<String, Adresse>();
 		
 		this.actif = true;
+		
+		this.setKeyValue();
 	}
 
 	public String getName() {
@@ -80,10 +83,10 @@ public class Contact {
 			ListAdresse.getInstance().getAllAdresse().remove(a.getKey());
 	}
 	
-	public String getKey() {
+/*	public String getKey() {
 		return this.name + this.firstName;
 	}
-
+*/
 	public Date getDateDeNaissance() {
 		return dateDeNaissance;
 	}
@@ -101,5 +104,13 @@ public class Contact {
 
 	public void setActif(boolean actif) {
 		this.actif = actif;
+	}
+
+	public String getKey() {
+		return keyValue;
+	}
+
+	private void setKeyValue() {
+		this.keyValue = this.name + this.firstName;
 	}
 }
