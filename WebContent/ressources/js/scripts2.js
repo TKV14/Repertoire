@@ -48,7 +48,7 @@ function address2(){
 function modif_address(value){
 	if(document.getElementById('modif_address_'+value).style.display=='none'){
 		document.getElementById('modif_address_'+value).style.display='block';
-		document.getElementById('adresse').style.display='none';
+		document.getElementById('adresse_'+value).style.display='none';
 		document.getElementById('add_address2').style.display='none';
 		document.getElementById('add_address').style.display='none';
 		document.getElementById('valider1').style.display='none';
