@@ -26,16 +26,22 @@
 		</div>
 			
 			<div class="informations">
-			
+			<br>
 	<form name="search" action="./search.html" method="post">
-		<p>Nom: <input id="name" name="name" type="text" size="30"/><br>
-		Prenom: <input id="firstName" name="firstName" type="text" size="30"/><br><br>
-		Mail: <input id="mail" name="mail" type="text" size="30"/><br>
+		<p>Nom : <input id="name" name="name" type="text" size="30"/><br><br>
+		Prénom : <input id="firstName" name="firstName" type="text" size="30"/><br><br>
+		Email : <input id="mail" name="mail" type="text" size="30"/><br>
 		</p><br>
-		Ne chercher que dans les contact actif : <input id="actif" name="actif" type="checkbox" value="OK"><br>
+		Ne chercher que dans les contacts actifs : <input id="actif" name="actif" type="checkbox" value="OK"><br>
+	<br><br>
 	<input type="submit" name="submit" value="Valider" />
 	</form>
 	</div>
+		<footer>
+		Arthur CLOUET - ESIEA AGENDA © 2013 - Nicolas LOUIS
+	</footer>
+	
 	</div>
+	
 </body>
 </html>
