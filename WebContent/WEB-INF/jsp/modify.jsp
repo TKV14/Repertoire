@@ -46,9 +46,9 @@
 			
 			<c:forEach var="adresse" items="${adresseList}">
 			<div id="adresse" class="adresse">
-			${adresse.getType} <br>
-			${adresse.getNum} ${adresse.getRue} <br>
-			${adresse.getCodePostal} ${adresse.getVille} <br>
+			${adresse.getType()} <br>
+			${adresse.getNum()} ${adresse.getRue()} <br>
+			${adresse.getCodePostal()} ${adresse.getVille()} <br>
 			</div>
 			<a href="#" onclick="address();">Modifier l'adresse du contact</a>
 			</c:forEach>
