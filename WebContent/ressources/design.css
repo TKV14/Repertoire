@@ -49,6 +49,21 @@ body {
 	color : #22427C;
 }	
 	
+	.modif_contact {
+	background : #77B5FE;
+	width : 500px;
+	padding : 15px;
+	border : 20px solid white;
+	margin : auto;
+	position : relative;
+	top : 10%;
+	box-shadow : 0px 0px 30px #000;	
+	border-radius : 50px;
+	z-index : 1;
+	font-family : helvetica, sans-serif;
+	color : #22427C;
+}	
+
 .tableau {
 	position : relative;
 	margin-left : 0px;
@@ -92,9 +107,32 @@ th {
 
 .adresse {
 	border : 1px solid white;
+	position : relative;
+	top : 10%;
+	width : 300px;
+	margin : auto;
+	color : black;
+	font-size : 1.3em;
+	font-weight : bold;
+	font-family : arial, sans serif;
 }
 
 .link {
+	border: none;
+	background-color: transparent;
+	color : white;
+	text-decoration : underline;
+	text-align : center;
+	position : relative;
+	font-size : 1.2em;
+	font-family : arial, sans serif;
+	cursor : pointer;
+}
+
+.link2 {
+	width : 20px;
+	height : 20px;
+    background-image : url('images/modifier.png');
 	border: none;
 	background-color: transparent;
 	color : white;
@@ -200,5 +238,15 @@ footer {
 	right : 0;
 	height : 30px;
 	color : white;
+	font-family : arial, sans serif;
+}
+
+.informations {
+	position : relative;
+	top : 7%;
+	margin : auto;
+	color : black;
+	font-size : 1.3em;
+	font-weight : bold;
 	font-family : arial, sans serif;
 }

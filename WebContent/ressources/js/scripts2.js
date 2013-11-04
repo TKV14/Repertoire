@@ -28,3 +28,11 @@ function address(){
 	
 }
 
+function address2(){
+	if(document.getElementById('add_address2').style.display=='none'){
+		document.getElementById('add_address2').style.display='block';
+	} else {
+		document.getElementById('add_address2').style.display='none';
+	}
+	
+}
