@@ -43,8 +43,18 @@
 					</p>
 					<input type="submit" name="submit" value="Valider" />
 			</form>
-				<a href="#" onclick="address();">Ajouter ou Modifier une adresse du contact</a>
-			<form id="add_address" name="add_address" action="/" method="post" style="display:none;">
+			
+			<c:forEach var="adresse" items="${adresseList}">
+			<div id="adresse" class="adresse">
+			${adresse.getType} <br>
+			${adresse.getNum} ${adresse.getRue} <br>
+			${adresse.getCodePostal} ${adresse.getVille} <br>
+			</div>
+			<a href="#" onclick="address();">Modifier l'adresse du contact</a>
+			</c:forEach>
+						<a href="#" onclick="address();">Modifier l'adresse du contact</a>
+			
+			<form id="add_address" name="adresse_getKey" action="./modify.html" method="post" style="display:none;">
 				<h4>Adresse</h4>
 					<p>
 					<input id="adresse_intitule" name="adresse_intitule" type="text" placeholder="Maison, Bureau..." required="required" value="${adresse.getType}" size="20"/>
