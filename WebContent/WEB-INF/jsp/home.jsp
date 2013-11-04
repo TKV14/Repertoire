@@ -59,7 +59,7 @@
 						<TD>
 						<form name="getKey" method="post" action="./modify.html">
 						<input name="keyValue" type="hidden" value="${contact.getKey()}">
-						<input name="submit" type="submit" class=link2/>
+						<input name="submit" type="submit" class="link2">
 						</form>
 						</TD>
 						<TD><img src="ressources/images/delete.png"></img></TD>
