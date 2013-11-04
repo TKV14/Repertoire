@@ -58,7 +58,6 @@
 						<TD>${contact.getMail()}</TD>
 						<TD>
 						<a href="./modify.html?keyValue=${contact.getKey()}"><img alt="modify" src="ressources/images/modifier.png"></a>
-						</form>
 						</TD>
 						<TD><img src="ressources/images/delete.png"></img></TD>
 					</TR>
