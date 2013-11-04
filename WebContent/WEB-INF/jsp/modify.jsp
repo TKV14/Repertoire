@@ -23,60 +23,47 @@
 				<a href="./home.html" onclick="liste_contact();">Liste des Contacts</a>
 			</p>
 		</div>
-
-		<br>
-	
-		<div id="tableau2" class="tableau2">
-			<TABLE BORDER="1"> 
-			<p>
-				<CAPTION><h1>Informations du Contact</h1></CAPTION>
-				<var="contact" items="${contact}"> 
-					<TR> 
-						<TH>NOM</TH> 
-						<TH>PRENOM</TH> 
-						<TH>EMAIL</TH> 
-					</TR> 
-					<TR>
-						<TD>${contact.getName()}</TD>
-						<TD>${contact.getFirstName()}</TD>
-						<TD>${contact.getMail()}</TD>
-					</TR>
-					<TR> 
-						<TH>DATE DE NAISSANCE</TH>
-						<TH>ACTIF</TH>
-					</TR>
-					<TR>
-						<TD>${contact.getDateDeNaissance()}</TD>
-						<TD>${contact.isActif()}</TD>
-					</TR>
-			</p>
-			</TABLE>
-		</div>
-		
-		<br>
-		<div id="tableau_address" class="tableau_address">		
-			<TABLE BORDER="1"> 
-			<p>
-				<CAPTION><h1>Adresses</h1></CAPTION> 		
-			</p>
-		</div>
-		
-		<div id="add_contact" class="add_contact"">
-			<form name="add_contact" action="./home.html" method="post">
+		<div id="modif_contact" class="modif_contact"">
+			<form name="modif_contact" action="./modify.html" method="post">
 				<h4>Civil</h4>
 					<input id="contact_nom" name="contact_LastName" type="text" placeholder="Nom" required="required" value="${contact.getName()}" size="30"/>
 					<input id="contact_prenom" name="contact_FirstName" type="text" placeholder="Prénom" required="required" value="${contact.getFirstName()}" size="30" />
 					<p>
 					<input id="contact_email" name="contact_Email" type="" placeholder="Email" required="required" value="${contact.getMail()}" size="40" />
 					</p>
-				<h4>Date de Naissance</h4>
+					
+				<h4>Date de Naissance</h4> 
+				<input id="contact_datedenaissance" name="contact_DateDeNaissance" type="date" value="${contact.getDateDeNaissance()}" size="11"/>
+					<h4>Actif</h4>
 					<p>
-					<input id="contact_datedenaissance" name="contact_DateDeNaissance" type="date" value="${contact.getDateDeNaissance()}" size="11"/>
+					<h5>
+					<input type="radio" name="actif" value="Oui" /> Oui
+					<input type="radio" name="actif" value="Non" /> Non
+					</h5>
 					</p>
 					<input type="submit" name="submit" value="Valider" />
 			</form>
-				<a href="#" onclick="address();">Ajouter une adresse au contact</a>
+				<a href="#" onclick="address();">Ajouter ou Modifier une adresse du contact</a>
 			<form id="add_address" name="add_address" action="/" method="post" style="display:none;">
+				<h4>Adresse</h4>
+					<p>
+					<input id="adresse_intitule" name="adresse_intitule" type="text" placeholder="Maison, Bureau..." required="required" value="${adresse.getType}" size="20"/>
+					</p>
+					<p>
+					<input id="adresse_numero" name="adresse_numero" type="text" placeholder="Numéro" required="required" value="${adresse.getNum}" size="10"/>
+					<input id="adresse_rue" name="adresse_rue" type="text" placeholder="Rue" required="required" value="${adresse.getRue}" size="50"/>
+					</p>
+					<p>
+					<input id="adresse_cp" name="adresse_cp" type="text" placeholder="Code Postal" required="required" value="${adresse.getCodePostal}" size="20"/>
+					<input id="adresse_ville" name="adresse_ville" type="text" placeholder="Ville" required="required" value="${adresse.getVille}" size="30"/>
+					</p>
+										<input type="submit" name="submit" value="Valider" />
+					<br>
+					<br>
+				<a href="#" onclick="address2();">Ajouter une autre adresse au contact</a>
+
+			</form>	
+			<form id="add_address2" name="add_address2" action="/" method="post" style="display:none;">
 				<h4>Adresse</h4>
 					<p>
 					<input id="adresse_intitule" name="adresse_intitule" type="text" placeholder="Maison, Bureau..." required="required" size="20"/>
@@ -89,14 +76,8 @@
 					<input id="adresse_cp" name="adresse_cp" type="text" placeholder="Code Postal" required="required" size="20"/>
 					<input id="adresse_ville" name="adresse_ville" type="text" placeholder="Ville" required="required" size="30"/>
 					</p>
-				<h4>Actif</h4>
-					<p>
-					<h5>
-					<input type="radio" name="actif" value="Oui" /> Oui
-					<input type="radio" name="actif" value="Non" /> Non
-					</h5>
-					</p>
-					<input type="submit" name="submit" value="Valider" />
+			<input type="submit" name="submit" value="Valider" />
+					
 			</form>
 		</div>			
 	</div>

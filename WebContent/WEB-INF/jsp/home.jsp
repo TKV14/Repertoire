@@ -59,7 +59,8 @@
 						<TD>
 						<form name="getKey" method="post" action="./modify.html">
 						<input name="keyValue" type="hidden" value="${contact.getKey()}">
-						<a href="#" onClick=getKey.submit()><img src="ressources/images/modifier.png"></img></a></form>
+						<input name="submit" type="submit" class=link2 value=""/>
+						</form>
 						</TD>
 						<TD><img src="ressources/images/delete.png"></img></TD>
 					</TR>
@@ -82,23 +83,7 @@
 					<p>
 					<input id="contact_datedenaissance" name="contact_DateDeNaissance" type="date" value="${dateformat.format(contact.getcontact_DateDeNaissance())}" size="11"/>
 					</p>
-					<input type="submit" name="submit" value="Valider" />
-			</form>
-				<a href="#" onclick="address();">Ajouter une adresse au contact</a>
-			<form id="add_address" name="add_address" action="/" method="post" style="display:none;">
-				<h4>Adresse</h4>
-					<p>
-					<input id="adresse_intitule" name="adresse_intitule" type="text" placeholder="Maison, Bureau..." required="required" size="20"/>
-					</p>
-					<p>
-					<input id="adresse_numero" name="adresse_numero" type="text" placeholder="Numéro" required="required" size="10"/>
-					<input id="adresse_rue" name="adresse_rue" type="text" placeholder="Rue" required="required" size="50"/>
-					</p>
-					<p>
-					<input id="adresse_cp" name="adresse_cp" type="text" placeholder="Code Postal" required="required" size="20"/>
-					<input id="adresse_ville" name="adresse_ville" type="text" placeholder="Ville" required="required" size="30"/>
-					</p>
-				<h4>Actif</h4>
+					<h4>Actif</h4>
 					<p>
 					<h5>
 					<input type="radio" name="actif" value="Oui" /> Oui
