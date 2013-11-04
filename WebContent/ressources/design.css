@@ -256,3 +256,9 @@ footer {
 	font-weight : bold;
 	font-family : arial, sans serif;
 }
+
+.search {
+	position : relative;
+	margin : auto;
+	top : 15%;
+}

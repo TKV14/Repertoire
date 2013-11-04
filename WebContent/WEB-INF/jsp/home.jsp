@@ -29,7 +29,7 @@
 			</p>
 
 			<p id="bouton_search" class="bouton2">
-				<a href="#">Rechercher</a>
+				<a href="./search.html">Rechercher</a>
 			</p>
 
 		</div>
@@ -59,7 +59,7 @@
 						<TD>
 						<form name="getKey" method="post" action="./modify.html">
 						<input name="keyValue" type="hidden" value="${contact.getKey()}">
-						<input name="submit" type="submit" class=link2 value=""/>
+						<input name="submit" type="submit" class=link2/>
 						</form>
 						</TD>
 						<TD><img src="ressources/images/delete.png"></img></TD>
