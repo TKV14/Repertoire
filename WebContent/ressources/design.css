@@ -106,7 +106,7 @@ th {
 }
 
 .adresse {
-	border : 1px solid white;
+	border : 3px solid white;
 	position : relative;
 	top : 10%;
 	width : 300px;
@@ -227,6 +227,12 @@ h5 {
 
 h6 {
 	font-size : 2em;
+	font-weight : bold;
+	color : white;
+}
+
+h7 {
+	font-size : 1.3em;
 	font-weight : bold;
 	color : white;
 }

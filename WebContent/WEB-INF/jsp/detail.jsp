@@ -39,7 +39,7 @@
 		<br>
 		<c:forEach var="adresse" items="${adresseList}">
 		<div id="adresse" class="adresse">
-		${adresse.getType()} <br>
+		<h7>${adresse.getType()}</h7> <br>
 		${adresse.getNum()} ${adresse.getRue()} <br>
 		${adresse.getCodePostal()} ${adresse.getVille()} <br>
 		</div>

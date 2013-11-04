@@ -21,7 +21,9 @@ function liste_contact(){
 function address(){
 	if(document.getElementById('add_address').style.display=='none'){
 		document.getElementById('add_address').style.display='block';
-		document.getElementById('tableau').style.display='none';
+		document.getElementById('valider1').style.display='none';
+		document.getElementById('modif_address').style.display='none';
+
 	} else {
 		document.getElementById('add_address').style.display='none';
 	}
@@ -31,8 +33,30 @@ function address(){
 function address2(){
 	if(document.getElementById('add_address2').style.display=='none'){
 		document.getElementById('add_address2').style.display='block';
+		document.getElementById('add_address').style.display='none';
+		document.getElementById('valider1').style.display='none';
+		document.getElementById('modif_address').style.display='none';
+
+
+
 	} else {
 		document.getElementById('add_address2').style.display='none';
+	}
+	
+}
+
+function modif_address(){
+	if(document.getElementById('modif_address').style.display=='none'){
+		document.getElementById('modif_address').style.display='block';
+		document.getElementById('adresse').style.display='none';
+		document.getElementById('add_address2').style.display='none';
+		document.getElementById('add_address').style.display='none';
+		document.getElementById('valider1').style.display='none';
+
+	} else {
+		document.getElementById('modif_address').style.display='';
+		document.getElementById('adresse').style.display='';
+
 	}
 	
 }
