@@ -59,11 +59,11 @@
 			${adresse.getCodePostal()} ${adresse.getVille()} <br>
 			</div>
 			<br>
-			<a href="#" onclick="modif_address();">Modifier l'adresse du contact</a>
+			<a href="#" onclick="javascript:modif_address('${adresse.getKey()}');">Modifier l'adresse du contact</a>
 			
 			
 			
-			<form id="modif_address" name="adresse_getKey" action="./modify.html" method="post" style="display:none;">
+			<form id="modif_address_${adresse.getKey()}" name="adresse_getKey" action="./modify.html" method="post" style="display:none;">
 				<h4>Adresse</h4>
 					<p>
 					<input id="adresse_intitule" name="adresse_intitule" type="text" placeholder="Maison, Bureau..." required="required" value="${adresse.getType()}" size="20"/>

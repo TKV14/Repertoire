@@ -45,9 +45,9 @@ function address2(){
 	
 }
 
-function modif_address(){
-	if(document.getElementById('modif_address').style.display=='none'){
-		document.getElementById('modif_address').style.display='block';
+function modif_address(value){
+	if(document.getElementById('modif_address_'+value).style.display=='none'){
+		document.getElementById('modif_address_'+value).style.display='block';
 		document.getElementById('adresse').style.display='none';
 		document.getElementById('add_address2').style.display='none';
 		document.getElementById('add_address').style.display='none';
