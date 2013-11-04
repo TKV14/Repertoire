@@ -59,7 +59,9 @@
 						<TD>
 						<a href="./modify.html?keyValue=${contact.getKey()}"><img alt="modify" src="ressources/images/modifier.png"></a>
 						</TD>
-						<TD><img src="ressources/images/delete.png"></img></TD>
+						<TD>
+						<a href="./delete.html?keyValue=${contact.getKey()}"><img alt="delete" src="ressources/images/delete.png"></a>
+						</TD>
 					</TR>
 				</c:forEach>
 			</p>				
