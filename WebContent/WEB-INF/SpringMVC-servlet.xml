@@ -8,6 +8,7 @@
 				<prop key="/home.html">Home</prop>
 				<prop key="/detail.html">Detail</prop>
 				<prop key="/modify.html">Modify</prop>
+				<prop key="/search.html">Search</prop>
 			</props>
 		</property>
 	</bean>
@@ -16,6 +17,7 @@
 	<bean id="Home" class="Controller.Home"/>
 	<bean id="Detail" class="Controller.Detail"/>
 	<bean id="Modify" class="Controller.Modify"/>
+	<bean id="Search" class="Controller.Search"/>
 
 	<!-- le résolveur de vues -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

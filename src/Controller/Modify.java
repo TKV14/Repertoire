@@ -18,7 +18,7 @@ public class Modify {
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		Contact c = ListContact.getInstance().getAllContact().get(request.getParameter("keyValue"));//new Contact("nom", "prenom", "mail");
+		Contact c = ListContact.getInstance().getAllContact().get(request.getParameter("keyValue"));
 		
 		Map<String, Contact> model = new HashMap<String, Contact>();
 		model.put("contact", c);
