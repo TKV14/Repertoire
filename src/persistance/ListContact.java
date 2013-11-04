@@ -2,6 +2,7 @@ package persistance;
 
 import java.util.HashMap;
 
+import Metier.Adresse;
 import Metier.Contact;
 
 public class ListContact {
@@ -14,7 +15,9 @@ public class ListContact {
 		allContact = new HashMap<String, Contact>();
 		
 		this.addContact(new Contact("CLOUET", "Arthur", "polth@gmail.com"));
-		this.addContact(new Contact("LOUIS", "Nicolas", "tkv@hotmail.fr"));
+		Contact c = new Contact("LOUIS", "Nicolas", "tkv@hotmail.fr");
+		c.addAdresse(new Adresse("Maison", "2", "rue du loiret", "75013", "Paris"));
+		this.addContact(c);
 	}
 	
 	public final static ListContact getInstance() {

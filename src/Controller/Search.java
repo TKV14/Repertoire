@@ -21,8 +21,8 @@ public class Search {
 		String name = request.getParameter("name");
 		String firstName = request.getParameter("firstName");
 		
-		System.out.println("Nom: " + name);
+		System.out.println("Nom: " + name + "Prenom: " + firstName);
 		
-		return new ModelAndView("search", null);
+		return new ModelAndView("result", null);
 	}
 }
