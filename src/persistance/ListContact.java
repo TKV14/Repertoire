@@ -12,6 +12,9 @@ public class ListContact {
 	private ListContact() {
 		super();
 		allContact = new HashMap<String, Contact>();
+		
+		this.addContact(new Contact("CLOUET", "Arthur", "polth@gmail.com"));
+		this.addContact(new Contact("LOUIS", "Nicolas", "tkv@hotmail.fr"));
 	}
 	
 	public final static ListContact getInstance() {
