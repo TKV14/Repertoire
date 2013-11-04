@@ -51,7 +51,7 @@
 						<TD>
 						<form name = "getKey" method ="post" action = "./modify.html">
 						<input name="keyValue" type="hidden" value ="${contact.getKey()}">
-						<a href="#" onClick=getKey.submit()>${contact.getName()}</a>
+						<a href="#" onClick=getKey.submit()><span class="a">${contact.getName()}</span></a>
 						</form></TD>
 						<TD>${contact.getFirstName()}</TD>
 						<TD>${contact.getMail()}</TD>
@@ -77,6 +77,14 @@
 					<p>
 					<input id="contact_datedenaissance" name="contact_DateDeNaissance" type="date" value="${dateformat.format(contact.getcontact_DateDeNaissance())}" size="11"/>
 					</p>
+				<h4>Actif</h4>
+					<p>
+					<h5>
+					<input type="radio" name="actif" value="Oui" /> Oui
+					<input type="radio" name="actif" value="Non" /> Non
+					</h5>
+					</p>
+						
 					<input type="submit" name="submit" value="Valider" />
 			</form>
 				<a href="#" onclick="address();">Ajouter une adresse au contact</a>
@@ -92,13 +100,6 @@
 					<p>
 					<input id="adresse_cp" name="adresse_cp" type="text" placeholder="Code Postal" required="required" size="20"/>
 					<input id="adresse_ville" name="adresse_ville" type="text" placeholder="Ville" required="required" size="30"/>
-					</p>
-				<h4>Actif</h4>
-					<p>
-					<h5>
-					<input type="radio" name="actif" value="Oui" /> Oui
-					<input type="radio" name="actif" value="Non" /> Non
-					</h5>
 					</p>
 					<input type="submit" name="submit" value="Valider" />
 			</form>

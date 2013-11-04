@@ -89,6 +89,13 @@ th {
 	background : transparent;
 	color : black;
 }
+
+.a {
+	color : white;
+	text-decoration : underline;
+	text-align : center;
+	position : relative;
+}
 	
 tr {
 	background : transparent;
